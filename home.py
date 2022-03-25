@@ -7,17 +7,18 @@ city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
 @myobj.route("/")
 def home():
-    response = '''
+    response = f'''
     <html>
     <body>
-        <h1>Hello,''' + name + '''!</h1>
+        <h1>Welcome''' + name + '''!</h1>
         <ahref="www.google.com">notgoogle</a>
         <ul>
         '''
     for i in city_names:
-        response += f"<li>{i}<li>"
+        response += f"<li>{i}</li>"
     response += '''
         <ul>
     </body>
     </html>'''
     return response
+
