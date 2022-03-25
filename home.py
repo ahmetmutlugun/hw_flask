@@ -1,12 +1,12 @@
 from flask import Flask
 
-app = Flask(__name__)
+myobj = Flask(__name__)
+name = "Lisa"
+city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
 
-@app.route("/")
+@myobj.route("/")
 def home():
-    name = "Lisa"
-    city_names = ['Paris', 'London', 'Rome', 'Tahiti']
     response = '''
     <html>
     <body>
@@ -21,6 +21,3 @@ def home():
     </body>
     </html>'''
     return response
-
-
-app.run()
