@@ -16,12 +16,12 @@ class CityForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
-@myobj.route("/")
+@myobj.route("/", methods=["GET", "POST"])
 def home():
     form = CityForm()
     print("Hello")
     if form.validate_on_submit():
-        flash('Hello World'.format(form.city_name.data))
+        flash('{}'.format(form.city_name.data))
         print("Hello2")
         return redirect('/')
     return render_template("home.html", name=name, cities=city_names, form=form)

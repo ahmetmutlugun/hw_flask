@@ -1,13 +1,13 @@
 <html>
     <body>
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul>
-                    {% for message in messages %}
-                        <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
         {% endwith %}
         <h1>Welcome {{name}}!</h1>
         <a href="www.google.com">notgoogle</a>
@@ -18,9 +18,11 @@
             </div>
             {% endfor %}
         </ul>
-        {{form.hidden_tag()}}
-        {{form.city_name.label}}<br>
-        {{form.city_name(size=32)}}
-        {{form.submit()}}
+        <form action="" method="post" novalidate>
+            {{form.hidden_tag()}}
+            {{form.city_name.label}}<br>
+            {{form.city_name(size=32)}}
+            {{form.submit()}}
+        </form>
     </body>
     </html>
