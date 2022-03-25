@@ -7,19 +7,20 @@ app = Flask(__name__)
 def home():
     name = "Lisa"
     city_names = ['Paris', 'London', 'Rome', 'Tahiti']
-    return '''
+    response = '''
     <html>
     <body>
         <h1>Hello, ''' + name + '''!</h1>
         <a href=“www.google.com”>not google</a>
         <ul>
-            <li> ''' + city_names[0] + '''
-            <li> ''' + city_names[1] + '''
-            <li> ''' + city_names[2] + '''
-            <li> ''' + city_names[3] + '''
+        '''
+    for i in city_names:
+        response += f"<li> {i}"
+    response += '''
         <ul>
     </body>
     </html>'''
+    return response
 
 
 app.run()
