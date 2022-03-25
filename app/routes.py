@@ -2,8 +2,8 @@ from flask import Flask, render_template, flash, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
+from app import myobj
 
-myobj = Flask(__name__)
 name = "Lisa"
 city_names = ['Paris', 'London', 'Rome', 'Tahiti']
 
