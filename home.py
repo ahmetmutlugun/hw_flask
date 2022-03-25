@@ -10,12 +10,12 @@ def home():
     response = '''
     <html>
     <body>
-        <h1>Hello, ''' + name + '''!</h1>
-        <a href=“www.google.com”>not google</a>
+        <h1>Hello,''' + name + '''!</h1>
+        <ahref="www.google.com">notgoogle</a>
         <ul>
         '''
     for i in city_names:
-        response += f"<li> {i}"
+        response += f"<li>{i}<li>"
     response += '''
         <ul>
     </body>
